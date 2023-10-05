@@ -15,13 +15,14 @@ class dataAugmentation:
 
     def execute(self):
         datagen = ImageDataGenerator(
-            rotation_range=30,
+            rotation_range=90,
+            brightness_range=[0.1,0.7],
             width_shift_range=0.2,
             height_shift_range=0.2,
             shear_range=0.2,
-            zoom_range=0.2,
-            horizontal_flip=True,
-            fill_mode='nearest'
+            horizontal_flip=True, 
+            vertical_flip=True,
+            fill_mode='reflect'
         )
         # Loop sobre todas as imagens no diretório de entrada
         for filename in os.listdir(self.source):
