@@ -17,9 +17,9 @@ class dataAugmentation:
         datagen = ImageDataGenerator(
             rotation_range=90,
             brightness_range=[0.1,0.7],
-            width_shift_range=0.2,
-            height_shift_range=0.2,
-            shear_range=0.2,
+            #width_shift_range=0.2,
+            #height_shift_range=0.2,
+            #shear_range=0.2,
             horizontal_flip=True, 
             vertical_flip=True,
             fill_mode='reflect'
